@@ -1,10 +1,10 @@
 ﻿#include <iostream>
 using namespace std;
 
-int sum_int(int a, int b) {
+int sum(int a, int b) {
 	return a + b;
 }
-float sum_float(float a, float b) {
+float sum(float a, float b) {
 	return a + b;
 }
 int main(void)
