@@ -1,12 +1,10 @@
 ﻿#include <iostream>
 #include <string.h>
-using namespace std;
+
 int main(void) {
 	char str[30] = { 0,};
 	char str2[30] = "C_insert";
-	for (int i = 0; str2[i] != '\0'; i++ ){
-		str[i] = str2[i]; 
-	}
+	strcpy(str, str2);
 	printf("%s \n", str);  
 	return 0;
 }
