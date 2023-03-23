@@ -2,9 +2,9 @@
 #include <string.h>
 
 int main(void) {
-	char str[30] = { 0,};
-	char str2[30] = "C_insert";
-	strcpy(str, str2);
-	printf("%s \n", str);  
+	std::string str1;
+	std::string str2 = "c++_insert";
+	str1 = str2;
+	std::cout << str1 << std::endl;
 	return 0;
 }
