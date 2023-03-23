@@ -1,9 +1,10 @@
-﻿#include <stdio.h>
+﻿#include <iostream>
 #include <String.h>
+using namespace std;
 int main(void) {
-	char str[30] = "minseo";
-	int size = 0;
+	string str = "minseo";
 
-	printf("문자열의 크기는 %d \n", strlen(str));
+	//str.length()도 가능 size()권장
+	cout << "문자열의 길이는 " << str.size() << endl;
 	return 0;
 }
