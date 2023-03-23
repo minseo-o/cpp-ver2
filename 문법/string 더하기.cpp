@@ -4,10 +4,15 @@
 //c++
 #include <iostream>
 #include <string>
+
+using namespace std;
+
 int main(void) {
-	char str1[30] = "minseo";
-	char str2[30] = "kim";
-	strcat(str1, str2);
+	string str1 = "minseo";
+	string str2 = "kim";
+
+	str1 = str1 + str2;
+	cout << str1 << endl;
 	
-	printf("%s \n", str1);
+	
 }
