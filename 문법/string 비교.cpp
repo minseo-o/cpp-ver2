@@ -10,7 +10,8 @@ using namespace std;
 int main(void) {
 	char str1[50] = "Hello";
 	char str2[50] = "Aorld";
-	//함수 인자 위치 결과 값( -1, 1) 이게 너무 헷갈려
+	// c++ string 편리해
+	// str2가 str1보다 사전(dictionary)에 더 늦게 나온다. 
 	
 	if (str2 >str1) {
 		cout <<"str2 > str1";
