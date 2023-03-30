@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\문법\c++test1.cpp" />
-    <ClCompile Include="..\문법\c++test2.cpp" />
-    <ClCompile Include="..\문법\c++test3.cpp" />
-    <ClCompile Include="..\문법\c++test4.cpp" />
+    <ClCompile Include="클래스 기본.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
