@@ -18,6 +18,14 @@ public:
 	int age;
 	int sex;// 가독성과 유지보수를 위해 열거형으로 하는 것을 추천
 	string  department;
+	//클래스는 멤버변수를 가질 수 있다. 
+	void print(void) {
+		cout << "이름 : " << name << endl;
+		cout << "학번 : " << hakbun << endl;
+		cout << "나이 : " << age << endl;
+		cout << "성별 : " << sex << endl;
+		cout << "학과 : " << department << endl;
+	}
 	
 };
 
@@ -29,11 +37,7 @@ int main(void) {
 	stu1.age = 18;
 	stu1.sex = 1;
 	stu1.department = "뉴미디어소프트웨어";
-	cout << "이름 : " << stu1.name << endl;
-	cout << "학번 : " << stu1.hakbun << endl;
-	cout << "나이 : " << stu1.age << endl;
-	cout << "성별 : " << stu1.sex << endl;
-	cout << "학과 : " << stu1.department << endl;
+	
 	
 	return 0;
 }
