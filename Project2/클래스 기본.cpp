@@ -7,7 +7,9 @@
 
 using namespace std;
 //여러 data들을 하나의 의미 있는 구조체로 묶어서 관리
-struct studenet {
+//class는 디폴트가 private
+class studenet {
+public:
 	string name;
 	//문자열로 하지 않는 이유는 성능때문에 
 	//일반적으로 문자열은 정수데이터보다 많은 메모리 공간을 요구
