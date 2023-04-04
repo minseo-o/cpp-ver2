@@ -26,7 +26,7 @@ public:
 		name = _name;
 		age = _age;
 		sex = _sex;
-		department = _department;
+		department = department;
 	}
 	//클래스는 멤버변수를 가질 수 있다. 
 	void print(void) {
@@ -54,7 +54,7 @@ private:
 
 int main(void) {
 	//struct Studenet 자료형 ( c++에서는 Studenet만 써두 댐
-	Student stu1 = Student("뉴진스",2100,18,1,"뉴미디어소프트웨어과");
+	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프ㅡ웨어과");
 	
 	stu1.print();
 	return 0;
