@@ -61,12 +61,12 @@ int main(void) {
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
 	
 	struct Person JWP;
-	int h = 186;
+	
 
-	JWP.height = &h;
+	JWP.height = 186;
 	JWP.weight = 82;
-	cout << "키 : " <<*(JWP.height) << endl; //height가 포인터라 주소값이 출력
+	cout << "키 : " <<JWP.height << endl; //height가 포인터라 주소값이 출력
 	cout << "몸무게 : "<<JWP.weight << endl;
-	stu1.print();
+	//stu1.print();
 	return 0;
 }
