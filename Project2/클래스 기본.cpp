@@ -18,9 +18,17 @@ public:
 	int age;
 	int sex;// 가독성과 유지보수를 위해 열거형으로 하는 것을 추천
 	string  department;
+	//생성자 : 객체가 생성될 때 호출되는 함수 
+	//생성자가 정의하지 않으면 default로 매개변수가 없는 생성자가 정의된다.
+	//Student(){}
+
 	//클래스는 멤버변수를 가질 수 있다. 
 	void print(void) {
-		cout << "이름 : " << name << "학번 : " << hakbun << "나이 : " << age << "성별 : " << sex  << "학과 : " << department << endl;
+		cout << "이름 : " << name << endl;
+		cout << "학번 : " << hakbun << endl;
+		cout << "나이 : " << age << endl;
+		cout << "성별 : " << sex << endl;
+		cout << "학과 : " << department << endl;
 	}
 	
 };
