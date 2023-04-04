@@ -8,7 +8,7 @@
 using namespace std;
 struct Person {
 	int weight;
-	int height;
+	int* height;
 };
 //여러 data들을 하나의 의미 있는 구조체로 묶어서 관리
 //class는 디폴트가 private
@@ -61,9 +61,12 @@ int main(void) {
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
 	
 	struct Person JWP;
-	JWP.height = 186;
+	int h = 186;
+
+	JWP.height = &h;
 	JWP.weight = 82;
-	cout << JWP.height << JWP.weight << endl;
+	cout << "키 : " <<*(JWP.height) << endl; //height가 포인터라 주소값이 출력
+	cout << "몸무게 : "<<JWP.weight << endl;
 	stu1.print();
 	return 0;
 }
