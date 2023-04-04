@@ -6,6 +6,10 @@
 #include <string>
 
 using namespace std;
+struct Person {
+	int weight;
+	int height;
+};
 //여러 data들을 하나의 의미 있는 구조체로 묶어서 관리
 //class는 디폴트가 private
 class Student {
@@ -56,6 +60,10 @@ int main(void) {
 	//struct Studenet 자료형 ( c++에서는 Studenet만 써두 댐
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
 	
+	struct Person JWP;
+	JWP.height = 186;
+	JWP.weight = 82;
+	cout << JWP.height << JWP.weight << endl;
 	stu1.print();
 	return 0;
 }
