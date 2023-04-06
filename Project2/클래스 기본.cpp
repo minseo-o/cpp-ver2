@@ -29,14 +29,9 @@ public:
 		department = "뉴미디어소프트웨어";
 
 	}
-	Student(string name, int hakbun, int age, int sex, string department) {
-		//this : 객체 자기 자신을 가리키는 포인터
-		// 매개변수명과 멤버변수명이 같아도 구별가능
-		this->hakbun = hakbun;
-		this->name = name;
-		this->age = age;
-		this->sex = sex;
-		this->department = department;
+	Student(string _name, int _hakbun, int _age, int _sex, string _department) 
+		: name(_name),hakbun(_hakbun),age(_age),sex(_sex),department(_department)
+	{
 	}
 	//클래스는 멤버변수를 가질 수 있다. 
 	void print(void) {
