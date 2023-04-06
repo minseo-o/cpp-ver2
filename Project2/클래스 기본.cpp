@@ -29,12 +29,14 @@ public:
 		department = "뉴미디어소프트웨어";
 
 	}
-	Student(string _name, int _hakbun, int _age, int _sex, string _department) {
-		hakbun = _hakbun;
-		name = _name;
-		age = _age;
-		sex = _sex;
-		department = _department;
+	Student(string name, int hakbun, int age, int sex, string department) {
+		//this : 객체 자기 자신을 가리키는 포인터
+		// 매개변수명과 멤버변수명이 같아도 구별가능
+		this->hakbun = hakbun;
+		this->name = name;
+		this->age = age;
+		this->sex = sex;
+		this->department = department;
 	}
 	//클래스는 멤버변수를 가질 수 있다. 
 	void print(void) {
@@ -63,21 +65,6 @@ private:
 int main(void) {
 	//struct Studenet 자료형 ( c++에서는 Studenet만 써두 댐
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
-	
-	struct Person JWP;
-	struct Actor KYLee;
-	KYLee.name = "이경영";
-	KYLee.dialog = "진행시켜";
-	struct Actor* ptr = &KYLee;
-	//ptr->name, (*ptr).name 같은 결과 
-	cout << "이름 : " << ptr->name << endl;
-	cout << "대사 : " << (*ptr).dialog << endl;
-	JWP.height = 186;
-	JWP.weight = 82;
-	cout << "이름 :" << KYLee.name << endl;
-	cout << "대사 :" << KYLee.dialog << endl;
-	cout << "키 : " <<JWP.height << endl; //height가 포인터라 주소값이 출력
-	cout << "몸무게 : "<<JWP.weight << endl;
-	//stu1.print();
+	stu1.print();
 	return 0;
 }
