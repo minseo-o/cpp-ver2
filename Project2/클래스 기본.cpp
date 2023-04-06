@@ -29,6 +29,7 @@ public:
 		department = "뉴미디어소프트웨어";
 
 	}
+	//멤버변수 초기화를 하면 const 멤버변수도 초기화 할 수 있다.
 	Student(string _name, int _hakbun, int _age, int _sex, string _department) 
 		: name(_name),hakbun(_hakbun),age(_age),sex(_sex),department(_department)
 	{
@@ -58,8 +59,13 @@ private:
 };
 
 int main(void) {
+	//정적할당
 	//struct Studenet 자료형 ( c++에서는 Studenet만 써두 댐
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
-	stu1.print();
+	//stu1.print();
+	// 
+	//동적할당
+	Student* stu2 = new Student("서강준", 3100, 31, 0, "방송연예과");
+	stu2->print();
 	return 0;
 }
