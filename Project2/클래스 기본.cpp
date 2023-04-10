@@ -59,12 +59,12 @@ private:
 };
 
 int main(void) {
-	//정적할당
+	//정적할당 : 메모리의 크기가 컴파일할 때 결정됨
 	//struct Studenet 자료형 ( c++에서는 Studenet만 써두 댐
 	Student stu1 = Student("뉴진스",2006,18,1,"뉴미디어소프웨어과");
 	//stu1.print();
 	// 
-	//동적할당
+	//동적할당 : 메모리의 크기가 실행할 때(runtime)결정됨 heep 영역
 	Student* stu2 = new Student("서강준", 3100, 31, 0, "방송연예과");
 	stu2->print();
 	delete stu2
