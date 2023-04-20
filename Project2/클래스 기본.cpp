@@ -12,6 +12,7 @@ class Student {
 public:
 	//생성자 : 객체가 생성될 때 호출되는 함수 
 	//생성자가 정의하지 않으면 default로 매개변수가 없는 생성자가 정의된다.
+	// 생성자함수의 이름은 클래스명과 같다
 	//Student(){}
 	Student() {
 		
@@ -22,6 +23,10 @@ public:
 		: name(_name),hakbun(_hakbun),age(_age),sex(_sex),department(_department)
 	{
 	}
+	//소멸자 객체가 메모리에서 해제될 때 호출되는 함수 
+	// ~클래스명()
+	// - 생성자처럼 반환형이 없음 생성자와 다르게 매개변수가 없다 
+	// -default로 컴파일러가 자동으로 생성
 	//클래스는 멤버변수를 가질 수 있다. 
 	void print(void) {
 		cout << "이름 : " << name << endl;
