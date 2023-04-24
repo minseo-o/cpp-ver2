@@ -23,9 +23,15 @@ private:
 
 int main(void)
 {
-	MString str = MString("yakitori tabetai");
+	//new 로 동적할당한 공간은 반드시 delete로 해제시켜야한다.
+	//그렇지 않으면 메모리 누수
+	MString* str = new MString("Aital 2-1");
 
-	cout << str.c_str() << endl;
+	cout << str->c_str() << endl;
+	//str delete진행,
+	//str->c_str_진행되지않았음.
+	//Todo :이를 delete해주는 소멸자 구현하기
+	delete str;
 
 	return 0;
 
