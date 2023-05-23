@@ -9,13 +9,15 @@ int main(void)
 	// 컴퓨터 사양이 달라도 똑같은 속도로 처리함
 	window.setFramerateLimit(60);
 
+	srand(time(NULL));
+
 	RectangleShape snake;
 	snake.setPosition(200, 300);
 	snake.setSize(Vector2f(30, 30));
 	snake.setFillColor(Color::Green);
 
 	RectangleShape apple;
-	apple.setPosition(300,400);
+	apple.setPosition(rand()%640-30,rand()%480-30);
 	apple.setSize(Vector2f(30, 30));
 	apple.setFillColor(Color::Red);
 
@@ -40,7 +42,7 @@ int main(void)
 		//update
 		//뱀이 사과를 먹어 
 		if (snake.getGlobalBounds().intersects(apple.getGlobalBounds())) {
-			apple.setPosition(-500, -500);
+			apple.setPosition(rand() % 640 - 30, rand() % 480 - 30);
 		}
 		window.clear();
 
