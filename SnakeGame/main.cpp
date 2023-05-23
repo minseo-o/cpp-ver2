@@ -37,7 +37,11 @@ int main(void)
 			snake.move(5, 0);
 		else if (Keyboard::isKeyPressed(Keyboard::Left))
 			snake.move(-5, 0);
-
+		//update
+		//뱀이 사과를 먹어 
+		if (snake.getGlobalBounds().intersects(apple.getGlobalBounds())) {
+			apple.setPosition(-500, -500);
+		}
 		window.clear();
 
 		window.draw(snake);
