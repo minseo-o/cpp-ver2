@@ -2,62 +2,29 @@
 #include <string.h>
 
 using namespace std;
-
-class Student
-{
-private:
-    int nHakbun;
-    char* sName;
-
+class IntArray {
 public:
-    Student();
-    Student(int Hakbun, const char* Name);
-    Student(const Student& rhs);
-    ~Student();
-
-    void show();
+	IntArray(const int* arr, int size) {
+		arr_ =new int[size];
+		size_ = size;
+		for (int i = 0; i < size; i++) {
+			arr_[i] = arr[i];
+		}
+	}
+	IntArray(const IntArray& rhs) {
+		arr_ = new int(rhs.size_);
+		size_ = rhs.size_;
+		for (int i = 0; i < rhs.size_; i++) {
+			arr_[i] = rhs.arr_[i];
+		}
+	}
+private:
+	int* arr_;
+	int size_;//  arr의 크기
 };
-
-Student::Student()
-{
-}
-
-Student::Student(int Hakbun, const char* Name)
-    : nHakbun(Hakbun)
-{
-    cout << "일반생성자 호출." << endl;
-    int len = strlen(Name) + 1;
-    sName = new char[len];
-    strcpy(sName, Name);
-}
-
-Student::Student(const Student& rhs)
-    : nHakbun(rhs.nHakbun)
-{
-    int len = strlen(rhs.sName) + 1;
-    sName = new char[len];
-    strcpy(sName, rhs.sName);
-}
-
-Student::~Student()
-{
-    delete[] sName;
-    cout << "소멸자 호출" << endl;
-}
-
-void Student::show()
-{
-    cout << "학번은 " << nHakbun << "입니다" << endl;
-    cout << "이름은 " << sName << "입니다" << endl << endl;
-}
-
-int main(void)
-{
-    Student stu1 = Student(1111, "JWP");
-    Student stu2 = stu1;
-
-    stu1.show();
-    stu2.show();
-
-    return 0;
+int main(void) {
+	int arr[] = { 1,2,3 };
+	IntArray ia = IntArray(arr,3);
+	IntArray ca = ia;
+	return 0;
 }
