@@ -30,7 +30,7 @@ public:
 	}
 	
 	~Animal() { cout << "Animal 생성자()" << endl; }
-	void Bite(void) { cout << "Animal 물다" << endl; }
+	void Roar(void) { cout << "Animal 짖다" << endl; }
 	void Eat(void) { cout << "Animal 먹다" << endl; }
 	void Sleep(void) { cout << "Animal 자다" << endl; }
 
@@ -48,12 +48,18 @@ public:
 		cout << "귀 길이"<<ear_length << endl;
 	}
 	~Rabbit(){ cout << "Rabbit 생성자()" << endl; }
+	//함수 override
+	//다형성(polymorphism):같은 함수 시그니처(반환형, 이름, 매개변수가 모두 같은)가 다르게 실행되는 것
+	//불구하구 다르게 실행되는 것
+	void Roar(void) {
+		cout << "깡총깡총" << endl;
+	}
 private:
 	int ear_length;
 };
 
 int main(void) {
 	Rabbit* rabbit = new Rabbit(COLOR_RED,3,20);//부모의 생성자도 호출
-	rabbit->Bite();//부모의 멤버함수 호출
+	rabbit->Roar();//부모의 멤버함수 호출 //깡총깡총
 	delete rabbit;
 }
