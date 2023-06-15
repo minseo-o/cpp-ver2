@@ -53,6 +53,7 @@ private:
 };
 
 int main(void) {
-	Rabbit* rabbit = new Rabbit(COLOR_RED,3,20);
+	Rabbit* rabbit = new Rabbit(COLOR_RED,3,20);//부모의 생성자도 호출
+	rabbit->Bite();//부모의 멤버함수 호출
 	delete rabbit;
 }
