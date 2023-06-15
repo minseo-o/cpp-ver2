@@ -12,21 +12,7 @@ public:
 		cout << "Animal 생성자()" << endl; 
 		cout << age_ <<"살" << endl;
 
-		switch (color_)
-		{
-		case COLOR_RED:
-			cout << "빨간색" << endl;
-			break;
-		case COLOR_GREEN:
-			cout << "초록색" << endl;
-			break;
-		case COLOR_BLUE:
-			cout << "파란색" << endl;
-			break;
-		default:
-			cout << "이상한색" << endl;
-			break;
-		}
+		
 	}
 	
 	~Animal() { cout << "Animal 생성자()" << endl; }
@@ -45,9 +31,9 @@ public:
 	Rabbit(int color,int age,int ear_length):Animal(color,age)
 	{
 		cout << "Rabbit 생성자()" << endl; 
-		cout << "귀 길이"<<ear_length << endl;
 	}
 	~Rabbit(){ cout << "Rabbit 생성자()" << endl; }
+
 	//함수 override
 	//다형성(polymorphism):같은 함수 시그니처(반환형, 이름, 매개변수가 모두 같은)가 다르게 실행되는 것
 	//불구하구 다르게 실행되는 것
@@ -59,7 +45,12 @@ private:
 };
 
 int main(void) {
-	Rabbit* rabbit = new Rabbit(COLOR_RED,3,20);//부모의 생성자도 호출
-	rabbit->Roar();//부모의 멤버함수 호출 //깡총깡총
+
+	Rabbit* rabbit = new Rabbit(COLOR_BLUE,30);//부모의 생성자도 호출
+	rabbit->Roar();//부모의 멤버함수
+	delete rabbit;
+
+	Rabbit* rabbit = new Rabbit(COLOR_BLUE,3,20);//부모의 생성자도 호출
+	rabbit->Roar();//동물 짖어(C++은 호출할 멤버변수가 정적(컴파일 시간)으로 결정
 	delete rabbit;
 }
